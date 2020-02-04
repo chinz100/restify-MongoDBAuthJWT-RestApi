@@ -91,5 +91,5 @@ POST http://localhost:3000/auth
 "body": {
 					"mode": "raw",
 					"raw": "{\n\t\"email\": \"admin@gmail.com\",\n\t\"password\": \"0123456\"\n}"
-		}"# restify-MongoDBAuthJWT-RestApi" 
+		}
  ```
