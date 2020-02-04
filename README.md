@@ -7,16 +7,16 @@
 
 improt file  **'JWTRestify authAPI.postman_collection.json'** As **postman** test API
 
-**//Insert USER Email in jwt**
+> Insert USER Email in jwt
 ```javascript
 POST http://localhost:3000/customers/insert
 
 "header": 
-						* "name": "Content-Type",
-						* "value": "application/json",
+					"name": "Content-Type",
+					"value": "application/json",
 
-						* "key": "Authorization",
-						* "value": "jwt 
+					"key": "Authorization",
+					"value": "jwt 
 "body": {
 					"mode": "raw",
 					"raw": "{\n\n\t\"balance\": \"0\"\n}",
@@ -25,7 +25,8 @@ POST http://localhost:3000/customers/insert
  ```
 ###### ========================================================================
 
-**//update balance bu id**
+> update balance bu id
+```javascript
 PUT http://localhost:3000/customers/:_id
 
 "header": 
@@ -39,10 +40,11 @@ PUT http://localhost:3000/customers/:_id
 					"mode": "raw",
 					"raw": "{\n\t\"balance\": \"36\"\n}"
 		}
-
+```
 ###### ========================================================================
 
-// GET list all customer in JWT email
+> GET list all customer in JWT email
+```javascript
 GET http://localhost:3000/customers/List
 
 "header": 
@@ -51,10 +53,11 @@ GET http://localhost:3000/customers/List
 
 						"key": "Authorization",
 						"value": "jwt 
-
+```
 ###### ========================================================================
 
-// Delete by id
+> Delete by id
+```javascript
 DELETE  http://localhost:3000/customers/:_id
 
 "header": 
@@ -64,22 +67,25 @@ DELETE  http://localhost:3000/customers/:_id
 					"key": "Authorization",
 					"value": "jwt 
                 
-
+```
 ###### ========================================================================
-// register auth
+> register auth
 
+```javascript
 POST http://localhost:3000/register
 
 "body": {
 					"mode": "raw",
 					"raw": "{\n\t\"email\": \"admin@gmail.com\",\n\t\"password\": \"0123456\"\n}"
 		}
-
+```
 ###### ========================================================================
-// GET token by auth
+> GET token by auth
+```javascript
 POST http://localhost:3000/auth
 
 "body": {
 					"mode": "raw",
 					"raw": "{\n\t\"email\": \"admin@gmail.com\",\n\t\"password\": \"0123456\"\n}"
 		}"# restify-MongoDBAuthJWT-RestApi" 
+ ```
