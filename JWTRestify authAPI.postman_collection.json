@@ -1,0 +1,215 @@
+{
+	"info": {
+		"name": "JWTRestify authAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/customers/insert",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTM5OTJlNDMyNTY5YTNlYjhjMmIxYzkiLCJlbWFpbCI6ImNoaW56MDAyMCIsInBhc3N3b3JkIjoiJDJhJDEwJHNQUXRkTUczNmdqZjIveTRIWUc1c2UvQkdkNFliS2FFZ1JLdC8xUXg2ZEJkTlZYWHg0alNDIiwiX192IjowLCJpYXQiOjE1ODA4MzY4NTYsImF1ZCI6ImNoaW56MDAyMCIsImlzcyI6Imh0dHA6Ly9kb21haW4uY29tLyIsInN1YiI6IkxvZ2luIn0.PkuO9VZik3i5Xj8zPaMY9OdQKJXhRVm9LTVUXevDPck",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\t\"balance\": \"0\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/customers/insert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers",
+						"insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/customers/5e39a80487609059f85453cf",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTM5N2MxODlhNWY0MDcwZmNkNmRiZmYiLCJlbWFpbCI6ImNoaW56MDAyQGdtYWlsLmNvbTEiLCJwYXNzd29yZCI6IiQyYSQxMCRnSHp1bGxOanNRdXRtYTFzc2RsMzhPQXFyemdPNmNJS0w5VVUxWlFSVnhKQ0lwNVE3RG1FSyIsIl9fdiI6MCwiaWF0IjoxNTgwODI2NTM5LCJuYmYiOjE1ODA4MjY1NDl9.zzqcc6zA-xKJ7W7h9rT1inRkktyeeBDGCNphheRyOgg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"balance\": \"36\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/customers/5e39a80487609059f85453cf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers",
+						"5e39a80487609059f85453cf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/customers/List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTM5OTJlNDMyNTY5YTNlYjhjMmIxYzkiLCJlbWFpbCI6ImNoaW56MDAyMCIsInBhc3N3b3JkIjoiJDJhJDEwJHNQUXRkTUczNmdqZjIveTRIWUc1c2UvQkdkNFliS2FFZ1JLdC8xUXg2ZEJkTlZYWHg0alNDIiwiX192IjowLCJpYXQiOjE1ODA4Mzc0MDEsImF1ZCI6ImNoaW56MDAyMCIsImlzcyI6Imh0dHA6Ly9kb21haW4uY29tLyIsInN1YiI6IkxvZ2luIn0.U0D3HsOmdMeHydAlNX2ZxOgiZbNiVQ40KLrUCWSyUuY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/customers/List",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers",
+						"List"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/customers/5e39a80d87609059f85453d3",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTM5OTJlNDMyNTY5YTNlYjhjMmIxYzkiLCJlbWFpbCI6ImNoaW56MDAyMCIsInBhc3N3b3JkIjoiJDJhJDEwJHNQUXRkTUczNmdqZjIveTRIWUc1c2UvQkdkNFliS2FFZ1JLdC8xUXg2ZEJkTlZYWHg0alNDIiwiX192IjowLCJpYXQiOjE1ODA4Mzc0MDEsImF1ZCI6ImNoaW56MDAyMCIsImlzcyI6Imh0dHA6Ly9kb21haW4uY29tLyIsInN1YiI6IkxvZ2luIn0.U0D3HsOmdMeHydAlNX2ZxOgiZbNiVQ40KLrUCWSyUuY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/customers/5e39a80d87609059f85453d3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers",
+						"5e39a80d87609059f85453d3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"adminz\",\n\t\"password\": \"0123456\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"adminz\",\n\t\"password\": \"0123456\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

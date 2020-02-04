@@ -8,6 +8,7 @@ _nodemon index.js_
 improt file  **'JWTRestify authAPI.postman_collection.json'** As **postman** test API
 
 **//Insert USER Email in jwt**
+```javascript
 POST http://localhost:3000/customers/insert
 
 "header": 
@@ -20,7 +21,8 @@ POST http://localhost:3000/customers/insert
 					"mode": "raw",
 					"raw": "{\n\n\t\"balance\": \"0\"\n}",
 		
-		}
+        }
+ ```
 **========================================================================**
 
 //update balance bu id
