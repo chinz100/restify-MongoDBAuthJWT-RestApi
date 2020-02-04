@@ -1,6 +1,7 @@
 ###### restify-MongoDBAuthJWT-RestApi 
 
- > ##### Link & Credit  **Traversy Media**
+ > ##### Link & Credit 
+  ##### Traversy Media**
 ##### Part 1 [youtube](https://www.youtube.com/watch?v=bqn-sx0v-l0)
 ##### Part 2 [youtube](https://www.youtube.com/watch?v=oyYOobBuczM)
 
