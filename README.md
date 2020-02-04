@@ -1,27 +1,27 @@
-"# restify-MongoDBAuthJWT-RestApi" 
+###### restify-MongoDBAuthJWT-RestApi 
 
-///////////////////////
-npm install -i 
-nodemon index.js
-///////////////////////
+**///////////////////////**
+_npm install -i_
+_nodemon index.js_
+**///////////////////////**
 
-improt file  'JWTRestify authAPI.postman_collection.json' As postman test API 
+improt file  **'JWTRestify authAPI.postman_collection.json'** As **postman** test API
 
-//Insert USER Email in jwt
+**//Insert USER Email in jwt**
 POST http://localhost:3000/customers/insert
 
 "header": 
-						"name": "Content-Type",
-						"value": "application/json",
+						* "name": "Content-Type",
+						* "value": "application/json",
 
-						"key": "Authorization",
-						"value": "jwt 
+						* "key": "Authorization",
+						* "value": "jwt 
 "body": {
 					"mode": "raw",
 					"raw": "{\n\n\t\"balance\": \"0\"\n}",
 		
 		}
-========================================================================
+**========================================================================**
 
 //update balance bu id
 PUT http://localhost:3000/customers/:_id
