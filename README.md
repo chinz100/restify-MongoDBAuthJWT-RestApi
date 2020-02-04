@@ -1,9 +1,9 @@
 ###### restify-MongoDBAuthJWT-RestApi 
 
-**///////////////////////**
-_npm install -i_
-_nodemon index.js_
-**///////////////////////**
+###### ///////////////////////
+##### _npm install -i_
+##### _nodemon index.js_
+###### ///////////////////////
 
 improt file  **'JWTRestify authAPI.postman_collection.json'** As **postman** test API
 
@@ -23,9 +23,9 @@ POST http://localhost:3000/customers/insert
 		
         }
  ```
-**========================================================================**
+###### ========================================================================
 
-//update balance bu id
+**//update balance bu id**
 PUT http://localhost:3000/customers/:_id
 
 "header": 
@@ -40,7 +40,7 @@ PUT http://localhost:3000/customers/:_id
 					"raw": "{\n\t\"balance\": \"36\"\n}"
 		}
 
-========================================================================
+###### ========================================================================
 
 // GET list all customer in JWT email
 GET http://localhost:3000/customers/List
@@ -52,7 +52,7 @@ GET http://localhost:3000/customers/List
 						"key": "Authorization",
 						"value": "jwt 
 
-========================================================================
+###### ========================================================================
 
 // Delete by id
 DELETE  http://localhost:3000/customers/:_id
@@ -65,7 +65,7 @@ DELETE  http://localhost:3000/customers/:_id
 					"value": "jwt 
                 
 
-========================================================================
+###### ========================================================================
 // register auth
 
 POST http://localhost:3000/register
@@ -75,7 +75,7 @@ POST http://localhost:3000/register
 					"raw": "{\n\t\"email\": \"admin@gmail.com\",\n\t\"password\": \"0123456\"\n}"
 		}
 
-========================================================================
+###### ========================================================================
 // GET token by auth
 POST http://localhost:3000/auth
 
