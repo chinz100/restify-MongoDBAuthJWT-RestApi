@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const User = mongoose.model('User');
 
 exports.autenticate = (email, password) => {
-
     return new Promise(async (resolve, reject) => {
 
         try{

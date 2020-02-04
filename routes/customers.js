@@ -13,6 +13,7 @@ module.exports = server => {
 
     //find by id
     server.get('/customers/List', async (req, res, next) => {
+    
 
         //find email form JWT HEADER
     const findemail = req.user.email;

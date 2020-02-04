@@ -12,7 +12,7 @@ module.exports = server => {
 
         const user = new User({
             email,
-            password
+            password,
         });
 
         bcrypt.genSalt(10, (err, salt)=>{
@@ -42,14 +42,19 @@ module.exports = server => {
 
             //CreateJWT
             const token = jwt.sign(user.toJSON(), config.JWT_SECRET, {
+              //  expiresIn: 3,
+           //   notBefore: '15m',
                 audience: email,
                 subject: 'Login',
-                issuer: 'http://domain.com/'
+                issuer: 'http://domain.com/',
             });
+    
+            
+           // console.log(token)
 
 /*
 var decoded = jwt.verify(token, config.JWT_SECRET);
-console.log(decoded.email)
+console.log(decoded)
 */
 
             const { iat,nbf,aud,sub,iss,exp } = jwt.decode(token);

@@ -10,8 +10,11 @@ const UserSchema = new mongoose.Schema({
     password:{
         type: String,
         required: true
+    },
+    exp: {
+        type: Date,
+        required: false
     }
-
 })
 
 const User = mongoose.model('User', UserSchema);
