@@ -13,12 +13,12 @@ module.exports = server => {
 
     //find by id
     server.get('/customers/List', async (req, res, next) => {
-    
+
 
         //find email form JWT HEADER
-    const findemail = req.user.email;
+        const findemail = req.user.email;
         try {
-            const customer = await Customer.find({ "email" : findemail})
+            const customer = await Customer.find({ "email": findemail })
             res.send(customer);
             next();
         } catch (err) {
@@ -58,14 +58,14 @@ module.exports = server => {
         if (!req.is('application/json')) {
             return next(new errors.InvalidContentError("Expects 'appication/json'"));
         }
-        const {balance } = req.body;
+        const { balance } = req.body;
         //console.log(email)
         const customer = new Customer({
             'name': req.user.email,
             'email': req.user.email,
             'balance': balance
         });
-         
+
         try {
             const newCustomer = await customer.save();
             res.send(newCustomer);

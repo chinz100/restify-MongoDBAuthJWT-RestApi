@@ -5,20 +5,20 @@ const User = mongoose.model('User');
 exports.autenticate = (email, password) => {
     return new Promise(async (resolve, reject) => {
 
-        try{
+        try {
             //get user by email
-            const user = await User.findOne({email});
+            const user = await User.findOne({ email });
 
             //Match password
-            bcrypt.compare(password, user.password,(err, isMatch) => {
-                if(err) throw err;
-                if(isMatch){
+            bcrypt.compare(password, user.password, (err, isMatch) => {
+                if (err) throw err;
+                if (isMatch) {
                     resolve(user);
-                }else{
+                } else {
                     reject('Authentication Failed');
                 }
             })
-        }catch(err){
+        } catch (err) {
             // Pass didn't match
             reject('Authentication Failed');
         }

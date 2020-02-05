@@ -9,7 +9,7 @@ server.use(restify.plugins.bodyParser());
 // protect routes
 server.use(rjwt({
     secret: config.JWT_SECRET,
-    audience: ['okhttp/3.12.0','Postman runtime'],
+    audience: ['okhttp/3.12.0', 'Postman runtime'],
     issuer: 'http://domain.com/',
     subject: 'Login',
     jwtid: '1', // billid
