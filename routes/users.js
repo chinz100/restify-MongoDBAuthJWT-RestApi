@@ -42,23 +42,24 @@ module.exports = server => {
 
             //CreateJWT
             const token = jwt.sign(user.toJSON(), config.JWT_SECRET, {
+                algorithm: 'HS384', //Encode Security
               //  expiresIn: 3,
            //   notBefore: '15m',
-                audience: email,
+                audience: 'Postman runtime',
                 subject: 'Login',
                 issuer: 'http://domain.com/',
+                jwtid: '1',
+                keyid: '1'
             });
     
-            
            // console.log(token)
-
 /*
 var decoded = jwt.verify(token, config.JWT_SECRET);
 console.log(decoded)
 */
 
-            const { iat,nbf,aud,sub,iss,exp } = jwt.decode(token);
-            res.send({ iat,nbf,aud,sub,iss,exp , token});
+            const { jti,iat,nbf,aud,sub,iss,exp } = jwt.decode(token);
+            res.send({ jti,iat,nbf,aud,sub,iss,exp ,token});
             next();
         }catch(err){
             return next(new errors.UnauthorizedError(err));
