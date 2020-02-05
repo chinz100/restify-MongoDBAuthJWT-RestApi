@@ -5,6 +5,7 @@ const User = require('../models/User');
 const auth = require('../auth');
 const config = require('../config');
 
+
 module.exports = server => {
 
     server.post('/register', (req, res, next) => {
@@ -41,7 +42,7 @@ module.exports = server => {
             const user = await auth.autenticate(email, password);
 
             //CreateJWT
-            const token = jwt.sign(user.toJSON(), config.JWT_SECRET, {
+            const token = jwt.sign(user.toJSON(), Base64.encode(config.JWT_SECRET), {
                 algorithm: 'HS384', //Encode Security
                 //  expiresIn: 3,
                 //   notBefore: '15m',
@@ -52,7 +53,7 @@ module.exports = server => {
                 keyid: '1'
             });
 
-            // console.log(token)
+    
             /*
             var decoded = jwt.verify(token, config.JWT_SECRET);
             console.log(decoded)

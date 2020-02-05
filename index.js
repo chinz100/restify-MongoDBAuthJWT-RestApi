@@ -1,7 +1,9 @@
 const restify = require('restify');
 const mongoose = require('mongoose');
+
 const config = require('./config');
 const rjwt = require('restify-jwt-community');
+var Base64 = require('js-base64').Base64;
 
 
 const server = restify.createServer();
@@ -10,7 +12,7 @@ const server = restify.createServer();
 server.use(restify.plugins.bodyParser());
 // protect routes
 server.use(rjwt({
-    secret: config.JWT_SECRET,
+    secret: Base64.encode(config.JWT_SECRET),
     audience: ['okhttp/3.12.0', 'Postman runtime'],
     issuer: 'http://domain.com/',
     subject: 'Login',
